@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dialogue-background.png-bb6848f3388dfc69bb708603e3859d85.stex"
+path="res://.import/indicator.svg-88d3fd4e63db4cacfeacde059c262b06.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialogue-background.png"
-dest_files=[ "res://.import/dialogue-background.png-bb6848f3388dfc69bb708603e3859d85.stex" ]
+source_file="res://Images/indicator.svg"
+dest_files=[ "res://.import/indicator.svg-88d3fd4e63db4cacfeacde059c262b06.stex" ]
 
 [params]
 

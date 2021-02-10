@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Images/Background.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Adobe Garamond Pro Semibold.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://DialogBox.gd" type="Script" id=3]
+[ext_resource path="res://Images/indicator.svg" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "IDLE"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 755.986, 109.721 ), Vector2( 755.986, 120 ) ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogBox" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -410.246
+margin_top = -185.44
+margin_right = 410.754
+margin_bottom = -31.4405
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="DialogBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = 15.0
+margin_right = -15.0
+margin_bottom = -15.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.337255, 0.133333, 0.00784314, 1 )
+bbcode_enabled = true
+bbcode_text = "Hello World!"
+text = "Lorem ipsum lorum ricksum. Lorem ipsum lorum ricksum. Lorem ipsum lorum ricksum. Lorem ipsum lorum ricksum. "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="indicator" type="Sprite" parent="DialogBox"]
+visible = false
+position = Vector2( 755.986, 119.98 )
+scale = Vector2( 0.159052, 0.159052 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/indicator"]
+autoplay = "IDLE"
+anims/IDLE = SubResource( 2 )
+
+[node name="Tween" type="Tween" parent="DialogBox"]

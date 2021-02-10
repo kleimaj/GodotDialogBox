@@ -1,7 +1,7 @@
 extends Control
 
 var dialog = [
-	'Hello there, welcome to the game! Press Enter to continue!',
+	'Hello there, welcome to the game! Press [color=#ff0000]Enter[/color] to continue!',
 	'If you like what you see, you can follow me for more!',
 	'If you don\'t, you should follow me anyway! @kleimaj!'
 ]

@@ -67,7 +67,7 @@ margin_bottom = -15.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.337255, 0.133333, 0.00784314, 1 )
 bbcode_enabled = true
-bbcode_text = "Hello World!"
+bbcode_text = "Lorem ipsum lorum ricksum. Lorem ipsum lorum ricksum. Lorem ipsum lorum ricksum. Lorem ipsum lorum ricksum. "
 text = "Lorem ipsum lorum ricksum. Lorem ipsum lorum ricksum. Lorem ipsum lorum ricksum. Lorem ipsum lorum ricksum. "
 __meta__ = {
 "_edit_use_anchors_": false
@@ -75,7 +75,7 @@ __meta__ = {
 
 [node name="indicator" type="Sprite" parent="DialogBox"]
 visible = false
-position = Vector2( 755.986, 116.345 )
+position = Vector2( 755.986, 115.859 )
 scale = Vector2( 0.159052, 0.159052 )
 texture = ExtResource( 4 )
 

@@ -38,6 +38,34 @@ var dialog = [
 	'Not sure… Never saw them again after we walked into the darkness…'
 ]
 
+var dialog_dics = [
+	{
+		'name': null,
+		'content': 'Hello there, welcome to the game! Press [color=#ff0000]Enter[/color] to continue!',
+	},
+	{
+		'name': 'Player',
+		'content': 'What\'s that?',
+	},
+	{
+		'name': 'Cat',
+		'content': 'Meow!',
+	},
+	{
+		'name': 'Dr. Flores',
+		'content': 'Black mold has been wreaking havoc on my terrariums and surprisingly, those same black mold spores cause shrinking.',
+	},
+	{
+		'name': 'Dr. Flores',
+		'content': '[color=#ff0000]The only way for us to return to normal size is to eradicate the black spores and return my terrariums to their former glory![/color]',
+	},
+	{
+		'name': null,
+		'content': '...'
+	}
+	
+]
+
 var dialog_index = 0
 var finished = false
 
@@ -50,8 +78,14 @@ func _process(delta):
 
 func load_dialog():
 	$indicator.hide()
-	if dialog_index < dialog.size():
-		$RichTextLabel.bbcode_text = dialog[dialog_index]
+	if dialog_index < dialog_dics.size():
+		# Show Name if exists
+		if dialog_dics[dialog_index].name != null:
+			$NameRect.show()
+			$NameRect/NameText.bbcode_text = dialog_dics[dialog_index].name
+		else:
+			$NameRect.hide()
+		$RichTextLabel.bbcode_text = dialog_dics[dialog_index].content
 		$RichTextLabel.percent_visible = 0
 		$Tween.interpolate_property($RichTextLabel, "percent_visible", 0, 1, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		$Tween.start()

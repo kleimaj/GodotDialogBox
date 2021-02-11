@@ -6,7 +6,7 @@
 [ext_resource path="res://Images/indicator.svg" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 40
+size = 35
 use_filter = true
 font_data = ExtResource( 2 )
 
@@ -75,7 +75,7 @@ __meta__ = {
 
 [node name="indicator" type="Sprite" parent="DialogBox"]
 visible = false
-position = Vector2( 755.986, 115.859 )
+position = Vector2( 755.986, 116.055 )
 scale = Vector2( 0.159052, 0.159052 )
 texture = ExtResource( 4 )
 
